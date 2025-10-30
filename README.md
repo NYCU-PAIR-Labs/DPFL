@@ -121,5 +121,8 @@ See `dpmodels/static.py` for a simple implementation where all clients participa
 ## Contributing
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. For more information, see our [contribution guidelines](CONTRIBUTING.md).
 
+## Acknowledgement
+This work was supported by NVIDIA Academic Grant Program, which provided the GPU resources used for our experiments. We also thank the NVIDIA NVFLARE team for their open-source federated learning framework, which inspired parts of our system design.
+
 ## License
 This project is licensed under the [MIT License](LICENSE).
