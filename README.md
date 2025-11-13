@@ -1,6 +1,7 @@
-# Dynamic Client Participation in Federated Learning
+# Dynamic Client Participation in Federated Learning: Benchmarks and a Knowledge Pool Plugin
 
-This repository is the official implementation of dynamic client participation in FL.
+[![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-31014/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## Overview
 Federated Learning (FL) enables multiple clients to collaboratively train a machine learning model while keeping their data decentralized. However, most existing FL frameworks assume static client participation, where all clients are available throughout the training process. In real-world scenarios, client availability can be dynamic due to various factors such as network conditions, device constraints, and user behavior. This project addresses the challenge of dynamic client participation in FL by providing a flexible and extensible platform that supports various dynamic participation patterns.
@@ -24,7 +25,7 @@ The platform offers:
 
 ### Knowledge Pool Federated Learning (KPFL) Plugin
 <p align="left">
-  <img src="figures/DPFL-KnowledgePool.png" alt="KPFL Diagram" width="65%"/>
+  <img src="figures/DPFL-KnowledgePool.png" alt="KPFL Diagram" width="60%"/>
 </p>
 
 KPFL is specifically designed to address the challenges posed by DPFL.
@@ -99,12 +100,12 @@ python3 main.py --dataset cifar10 --algorithm fedavg --skew_type label --alpha 1
 python3 main.py --dataset cifar10 --algorithm fedavg --skew_type label --alpha 100.0 --dynamic_type incremental-departure --round_start 50 --interval 10 --clients_per_interval 1
 ```
 
-Enabled Simulation Mode (with compute/communication latencies):
+Enable Simulation Mode (with compute/communication latencies):
 ```bash
 python3 main.py --dataset cifar10 --algorithm fedavg --skew_type label --alpha 100.0 --dynamic_type random --sim
 ```
 
-Enabled KPFL (knowledge-pool federated learning):
+Enable KPFL (knowledge-pool federated learning):
 ```bash
 python3 main.py --dataset cifar10 --algorithm fedavg --skew_type label --alpha 100.0 --dynamic_type random --kpfl
 ```
