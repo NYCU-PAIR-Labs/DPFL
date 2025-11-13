@@ -1,0 +1,17 @@
+nni==2.10
+filelock==3.10
+typeguard<3
+websockets
+colorama
+seaborn
+kornia
+natsort
+tqdm
+wandb
+scipy
+pynndescent
+matplotlib
+lmfit
+kaleido
+pandas
+scikit-learn

@@ -1,0 +1,1933 @@
+{
+    "Default": {
+        "inner_round_g": 8,
+        "inner_round_d": 4,
+        "kd_gamma": 8,
+        "kd_beta": 5,
+        "kd_eta": 7,
+        "con_T": 10,
+        "online_rate": 0.16,
+        "offline_rate": 0.2
+    },
+
+    "cifar10": {
+        "fedavg": {},
+
+        "fedprox": {
+            "mu": 0.04
+        },
+
+        "scaffold": {},
+
+        "fedmd": {
+            "finetine_epochs": 80,
+            "logit_matching_epochs": 2
+        },
+
+        "feddf": {
+            "ensemble_epoch": 50,
+            "sever_local_steps": 9,
+            "T": 35,
+            "d_batch_size": 64
+        },
+
+        "fedgen": {
+            "ensemble_epochs": 20,
+            "ensemble_alpha": 6,
+            "ensemble_eta": 8,
+            "generative_alpha": 19,
+            "gen_batch_size": 128
+        },
+
+        "moon": {
+            "mu": 7,
+            "T": 30
+        },
+
+        "fedproto": {
+            "ld": 11.09
+        },
+
+        "fedprotov2": {
+            "ld": 0.1
+        },
+
+        "fpl": {
+            "infoNCET": 0.03
+        },
+
+        "flwf": {
+            "alpha": 5,
+            "T": 8
+        },
+
+        "cfed": {
+            "local_d_epochs": 1,
+            "server_d_epochs": 7,
+            "T": 50,
+            "alpha": 0.0023,
+            "d_batch_size": 32
+        },
+
+        "target": {
+            "alpha": 20,
+            "g_steps": 40,
+            "kd_steps": 20,
+            "warmup": 8,
+            "syn_round": 25,
+            "oh": 3,
+            "bn": 13,
+            "adv": 2,
+            "T": 7,
+            "gen_T": 15
+        },
+
+        "fccl": {
+            "public_batch_size": 64,
+            "off_diag_weight": 0.99
+        },
+
+        "fedcl": {
+            "proxy_ratio": 0.05,
+            "coe": 1.5
+        },
+
+        "fedprox+kpfl": {
+            "static": {
+                "mu": 0.06225823565760387,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 1,
+                "kd_beta": 3,
+                "kd_eta": 5,
+                "con_T": 50,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 0.049550735019850356,
+                "inner_round_g": 6,
+                "inner_round_d": 1,
+                "kd_gamma": 9,
+                "kd_beta": 6,
+                "kd_eta": 3,
+                "con_T": 10,
+                "online_rate": -0.2,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 0.0410593296001578,
+                "inner_round_g": 3,
+                "inner_round_d": 1,
+                "kd_gamma": 6,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.06,
+                "offline_rate": 0.08
+            },
+            "round-robin": {
+                "mu": 0.04,
+                "inner_round_g": 3,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": -2
+            },
+            "random": {
+                "mu": 0.021071366206026627,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 7,
+                "kd_beta": 3,
+                "kd_eta": 2,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": -0.04
+            },
+            "markov": {
+                "mu": 0.04,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 6,
+                "kd_beta": 4,
+                "kd_eta": 7,
+                "con_T": 40,
+                "impt_ld": 0,
+                "online_rate": 0.04,
+                "offline_rate": -1.86
+            }
+        },
+
+        "fedgen+kpfl": {
+            "static": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 5,
+                "ensemble_eta": 5,
+                "inner_round_g": 2,
+                "inner_round_d": 1,
+                "kd_gamma": 10,
+                "kd_beta": 5,
+                "kd_eta": 9,
+                "con_T": 1,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 9,
+                "ensemble_eta": 3,
+                "inner_round_g": 4,
+                "inner_round_d": 1,
+                "kd_gamma": 10,
+                "kd_beta": 2,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": -0.06,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 2,
+                "ensemble_eta": 3,
+                "inner_round_g": 4,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 3,
+                "kd_eta": 5,
+                "con_T": 20,
+                "online_rate": -0.08,
+                "offline_rate": 0.2
+            },
+            "round-robin": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 10,
+                "ensemble_eta": 2,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 9,
+                "kd_eta": 8,
+                "con_T": 20,
+                "online_rate": 0.18,
+                "offline_rate": -0.04
+            },
+            "random": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 1,
+                "ensemble_eta": 4,
+                "inner_round_g": 7,
+                "inner_round_d": 2,
+                "kd_gamma": 5,
+                "kd_beta": 8,
+                "kd_eta": 6,
+                "con_T": 10,
+                "online_rate": -0.08,
+                "offline_rate": -0.02
+            },
+            "markov": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 9,
+                "ensemble_eta": 1,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 9,
+                "kd_beta": 2,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": -0.1,
+                "offline_rate": 0.14
+            }
+        },
+
+        "moon+kpfl": {
+            "static": {
+                "mu": 9,
+                "T": 35,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 9,
+                "kd_beta": 10,
+                "kd_eta": 6,
+                "con_T": 10,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 5,
+                "T": 20,
+                "inner_round_g": 5,
+                "inner_round_d": 2,
+                "kd_gamma": 10,
+                "kd_beta": 5,
+                "kd_eta": 10,
+                "con_T": 20,
+                "online_rate": -0.2,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 5,
+                "T": 50,
+                "inner_round_g": 6,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 2,
+                "kd_eta": 6,
+                "con_T": 40,
+                "online_rate": -0.06,
+                "offline_rate": 0.12
+            },
+            "round-robin": {
+                "mu": 2,
+                "T": 30,
+                "inner_round_g": 7,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 1,
+                "kd_eta": 2,
+                "con_T": 40,
+                "online_rate": 0.06,
+                "offline_rate": -0.02
+            },
+            "random": {
+                "mu": 4,
+                "T": 20,
+                "inner_round_g": 6,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 1,
+                "kd_eta": 7,
+                "con_T": 1,
+                "online_rate": 0,
+                "offline_rate": -0.02
+            },
+            "markov": {
+                "mu": 6,
+                "T": 20,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 7,
+                "kd_beta": 6,
+                "kd_eta": 2,
+                "con_T": 40,
+                "online_rate": 0.2,
+                "offline_rate": -0.1
+            }
+        },
+
+        "flwf+kpfl": {
+            "static": {
+                "alpha": 28,
+                "T": 17,
+                "inner_round_g": 4,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 7,
+                "kd_eta": 10,
+                "con_T": 50,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "alpha": 8,
+                "T": 17,
+                "inner_round_g": 8,
+                "inner_round_d": 4,
+                "kd_gamma": 4,
+                "kd_beta": 4,
+                "kd_eta": 4,
+                "con_T": 20,
+                "online_rate": 0.04,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "alpha": 18,
+                "T": 15,
+                "inner_round_g": 1,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 10,
+                "kd_eta": 6,
+                "con_T": 1,
+                "online_rate": 0.04,
+                "offline_rate": 0.16
+            },
+            "round-robin": {
+                "alpha": 22,
+                "T": 16,
+                "inner_round_g": 1,
+                "inner_round_d": 1,
+                "kd_gamma": 5,
+                "kd_beta": 3,
+                "kd_eta": 7,
+                "con_T": 50,
+                "online_rate": -0.14,
+                "offline_rate": -0.16
+            },
+            "random": {
+                "alpha": 13,
+                "T": 11,
+                "inner_round_g": 7,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 8,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": 0.2,
+                "offline_rate": -0.02
+            },
+            "markov": {
+                "alpha": 27,
+                "T": 19,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 10,
+                "kd_beta": 3,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": 0.08,
+                "offline_rate": -0.1
+            }
+        }
+    },
+
+    "cifar100": {
+        "fedavg": {},
+
+        "fedprox": {
+            "mu": 0.005
+        },
+
+        "scaffold": {},
+
+        "fedmd": {
+            "finetine_epochs": 80,
+            "logit_matching_epochs": 1
+        },
+
+        "feddf": {
+            "ensemble_epoch": 10,
+            "sever_local_steps": 4,
+            "T": 15,
+            "d_batch_size": 64
+        },
+
+        "fedgen": {
+            "ensemble_epochs": 80,
+            "ensemble_alpha": 7,
+            "ensemble_eta": 3,
+            "generative_alpha": 5,
+            "gen_batch_size": 128
+        },
+
+        "moon": {
+            "mu": 5,
+            "T": 10
+        },
+
+        "fedproto": {
+            "ld": 2.8484995926212098
+        },
+
+        "fpl": {
+            "infoNCET": 4.721389174960335
+        },
+
+        "flwf": {
+            "alpha": 7,
+            "T": 19
+        },
+
+        "cfed": {
+            "local_d_epochs": 10,
+            "server_d_epochs": 4,
+            "T": 30,
+            "alpha": 4.825382165905895,
+            "d_batch_size": 32
+        },
+
+        "fedcl": {
+            "proxy_ratio": 0.01,
+            "coe": 4
+        },
+
+        "fedprox+kpfl": {
+            "static": {
+                "mu": 0.005987324380653648,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 5,
+                "kd_beta": 7,
+                "kd_eta": 4,
+                "con_T": 1,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 0.0015152621369072083,
+                "inner_round_g": 9,
+                "inner_round_d": 4,
+                "kd_gamma": 3,
+                "kd_beta": 2,
+                "kd_eta": 3,
+                "con_T": 40,
+                "online_rate": 0.08,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 0.0014727582611168976,
+                "inner_round_g": 3,
+                "inner_round_d": 5,
+                "kd_gamma": 5,
+                "kd_beta": 9,
+                "kd_eta": 9,
+                "con_T": 20,
+                "online_rate": 0.02,
+                "offline_rate": 0
+            },
+            "round-robin": {
+                "mu": 0.0058133725315326545,
+                "inner_round_g": 8,
+                "inner_round_d": 1,
+                "kd_gamma": 7,
+                "kd_beta": 3,
+                "kd_eta": 1,
+                "con_T": 40,
+                "online_rate": -0.06,
+                "offline_rate": -0.12
+            },
+            "random": {
+                "mu": 0.0033085810436361642,
+                "inner_round_g": 6,
+                "inner_round_d": 3,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": 0.14,
+                "offline_rate": -0.12
+            },
+            "markov": {
+                "mu": 0.0024233627532840364,
+                "inner_round_g": 4,
+                "inner_round_d": 3,
+                "kd_gamma": 10,
+                "kd_beta": 4,
+                "kd_eta": 9,
+                "con_T": 50,
+                "online_rate": 0.02,
+                "offline_rate": -0.04
+            }
+        },
+
+        "fedgen+kpfl": {
+            "static": {
+                "ensemble_epochs": 60,
+                "generative_alpha": 6,
+                "ensemble_alpha": 10,
+                "ensemble_eta": 2,
+                "gen_batch_size": 128,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 9,
+                "kd_beta": 6,
+                "kd_eta": 7,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "ensemble_epochs": 90,
+                "generative_alpha": 13,
+                "ensemble_alpha": 9,
+                "ensemble_eta": 4,
+                "gen_batch_size": 128,
+                "inner_round_g": 5,
+                "inner_round_d": 1,
+                "kd_gamma": 2,
+                "kd_beta": 5,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": -0.04,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 13,
+                "ensemble_alpha": 8,
+                "ensemble_eta": 4,
+                "gen_batch_size": 64,
+                "inner_round_g": 9,
+                "inner_round_d": 1,
+                "kd_gamma": 7,
+                "kd_beta": 8,
+                "kd_eta": 6,
+                "con_T": 10,
+                "online_rate": -0.06,
+                "offline_rate": -0.02
+            },
+            "round-robin": {
+                "ensemble_epochs": 60,
+                "generative_alpha": 12,
+                "ensemble_alpha": 4,
+                "ensemble_eta": 1,
+                "gen_batch_size": 128,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 9,
+                "kd_beta": 4,
+                "kd_eta": 1,
+                "con_T": 10,
+                "online_rate": -0.18,
+                "offline_rate": -0.1
+            },
+            "random": {
+                "ensemble_epochs": 40,
+                "generative_alpha": 12,
+                "ensemble_alpha": 8,
+                "ensemble_eta": 5,
+                "gen_batch_size": 64,
+                "inner_round_g": 1,
+                "inner_round_d": 2,
+                "kd_gamma": 4,
+                "kd_beta": 6,
+                "kd_eta": 3,
+                "con_T": 50,
+                "online_rate": -0.08,
+                "offline_rate": 0.16
+            },
+            "markov": {
+                "ensemble_epochs": 90,
+                "generative_alpha": 10,
+                "ensemble_alpha": 7,
+                "ensemble_eta": 8,
+                "gen_batch_size": 64,
+                "inner_round_g": 2,
+                "inner_round_d": 1,
+                "kd_gamma": 9,
+                "kd_beta": 5,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": 0.18,
+                "offline_rate": 0.1
+            }
+        },
+
+        "moon+kpfl": {
+            "static": {
+                "mu": 7,
+                "T": 30,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 4,
+                "kd_beta": 8,
+                "kd_eta": 3,
+                "con_T": 50,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 5,
+                "T": 20,
+                "inner_round_g": 4,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 5,
+                "kd_eta": 4,
+                "con_T": 10,
+                "online_rate": -0.02,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 8,
+                "T": 10,
+                "inner_round_g": 5,
+                "inner_round_d": 4,
+                "kd_gamma": 2,
+                "kd_beta": 3,
+                "kd_eta": 3,
+                "con_T": 30,
+                "online_rate": 0.18,
+                "offline_rate": -0.02
+            },
+            "round-robin": {
+                "mu": 1,
+                "T": 10,
+                "inner_round_g": 3,
+                "inner_round_d": 2,
+                "kd_gamma": 4,
+                "kd_beta": 2,
+                "kd_eta": 1,
+                "con_T": 50,
+                "online_rate": 0.02,
+                "offline_rate": -0.08
+            },
+            "random": {
+                "mu": 8,
+                "T": 40,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 5,
+                "kd_beta": 7,
+                "kd_eta": 1,
+                "con_T": 30,
+                "online_rate": 0.1,
+                "offline_rate": -0.14
+            },
+            "markov": {
+                "mu": 4,
+                "T": 10,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 7,
+                "kd_beta": 8,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": 0.18,
+                "offline_rate": -0.08
+            }
+        },
+
+        "flwf+kpfl": {
+            "static": {
+                "alpha": 5,
+                "T": 14,
+                "inner_round_g": 5,
+                "inner_round_d": 5,
+                "kd_gamma": 2,
+                "kd_beta": 7,
+                "kd_eta": 10,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "alpha": 7,
+                "T": 12,
+                "inner_round_g": 7,
+                "inner_round_d": 2,
+                "kd_gamma": 8,
+                "kd_beta": 8,
+                "kd_eta": 1,
+                "con_T": 40,
+                "online_rate": 0.08,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "alpha": 13,
+                "T": 18,
+                "inner_round_g": 7,
+                "inner_round_d": 3,
+                "kd_gamma": 9,
+                "kd_beta": 3,
+                "kd_eta": 7,
+                "con_T": 50,
+                "online_rate": 0.18,
+                "offline_rate": -0.06
+            },
+            "round-robin": {
+                "alpha": 10,
+                "T": 10,
+                "inner_round_g": 9,
+                "inner_round_d": 4,
+                "kd_gamma": 2,
+                "kd_beta": 8,
+                "kd_eta": 5,
+                "con_T": 30,
+                "online_rate": -0.02,
+                "offline_rate": -0.16
+            },
+            "random": {
+                "alpha": 2,
+                "T": 6,
+                "inner_round_g": 4,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 4,
+                "kd_eta": 4,
+                "con_T": 50,
+                "online_rate": 0.06,
+                "offline_rate": 0.06
+            },
+            "markov": {
+                "alpha": 20,
+                "T": 16,
+                "inner_round_g": 8,
+                "inner_round_d": 4,
+                "kd_gamma": 1,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 30,
+                "online_rate": 0.04,
+                "offline_rate": -0.06
+            }
+        }
+    },
+
+    "mnist": {
+        "fedavg": {},
+
+        "fedprox": {
+            "mu": 0.00325
+        },
+
+        "scaffold": {},
+
+        "fedmd": {
+            "finetine_epochs": 40,
+            "logit_matching_epochs": 5
+        },
+
+        "feddf": {
+            "ensemble_epoch": 10,
+            "sever_local_steps": 8,
+            "T": 50,
+            "d_batch_size": 256
+        },
+
+        "fedgen": {
+            "ensemble_epochs": 10,
+            "ensemble_alpha": 4,
+            "ensemble_eta": 4,
+            "generative_alpha": 18,
+            "gen_batch_size": 256
+        },
+
+        "moon": {
+            "mu": 1,
+            "T": 20
+        },
+
+        "fedproto": {
+            "ld": 0.034525230100778376
+        },
+
+        "fpl": {
+            "infoNCET": 1.597429444616742
+        },
+
+        "flwf": {
+            "alpha": 26,
+            "T": 20
+        },
+
+        "cfed": {
+            "local_d_epochs": 5,
+            "server_d_epochs": 8,
+            "T": 35,
+            "alpha": 2.2750026165716735,
+            "d_batch_size": 32
+        },
+
+        "target": {
+            "alpha": 20,
+            "g_steps": 40,
+            "kd_steps": 20,
+            "warmup": 8,
+            "syn_round": 25,
+            "oh": 3,
+            "bn": 13,
+            "adv": 2,
+            "T": 7,
+            "gen_T": 15
+        },
+
+        "fccl": {
+            "public_batch_size": 256,
+            "off_diag_weight": 4.58
+        },
+
+        "fedcl": {
+            "proxy_ratio": 0.01,
+            "coe": 10.5
+        },
+
+        "fedprox+kpfl": {
+            "static": {
+                "mu": 0.007177103705918669,
+                "inner_round_g": 9,
+                "inner_round_d": 5,
+                "kd_gamma": 3,
+                "kd_beta": 2,
+                "kd_eta": 7,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 0.004928521839955296,
+                "inner_round_g": 9,
+                "inner_round_d": 3,
+                "kd_gamma": 7,
+                "kd_beta": 10,
+                "kd_eta": 1,
+                "con_T": 20,
+                "online_rate": -0.18,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 0.006099380296817334,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 4,
+                "kd_eta": 7,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": 0.16
+            },
+            "round-robin": {
+                "mu": 0.002877716620612914,
+                "inner_round_g": 4,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 9,
+                "kd_eta": 7,
+                "con_T": 20,
+                "online_rate": 0.1,
+                "offline_rate": -0.04
+            },
+            "random": {
+                "mu": 0.006607179630208521,
+                "inner_round_g": 9,
+                "inner_round_d": 3,
+                "kd_gamma": 6,
+                "kd_beta": 3,
+                "kd_eta": 10,
+                "con_T": 40,
+                "online_rate": 0.06,
+                "offline_rate": -0.16
+            },
+            "markov": {
+                "mu": 0.010138641309330032,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 6,
+                "kd_beta": 5,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": 0.2,
+                "offline_rate": -0.08
+            }
+        },
+
+        "fedgen+kpfl": {
+            "static": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 2,
+                "ensemble_eta": 5,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 1,
+                "kd_beta": 4,
+                "kd_eta": 4,
+                "con_T": 10,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 1,
+                "ensemble_eta": 4,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 3,
+                "kd_beta": 9,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": -0.06,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 3,
+                "ensemble_eta": 2,
+                "inner_round_g": 7,
+                "inner_round_d": 5,
+                "kd_gamma": 7,
+                "kd_beta": 6,
+                "kd_eta": 7,
+                "con_T": 20,
+                "online_rate": -0.2,
+                "offline_rate": -0.08
+            },
+            "round-robin": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 4,
+                "ensemble_eta": 1,
+                "inner_round_g": 5,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": 0.1,
+                "offline_rate": -0.08
+            },
+            "random": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 1,
+                "ensemble_eta": 3,
+                "inner_round_g": 8,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 9,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": 0.08,
+                "offline_rate": -0.12
+            },
+            "markov": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 1,
+                "ensemble_eta": 2,
+                "inner_round_g": 5,
+                "inner_round_d": 5,
+                "kd_gamma": 3,
+                "kd_beta": 1,
+                "kd_eta": 9,
+                "con_T": 30,
+                "online_rate": 0.06,
+                "offline_rate": -0.04
+            }
+        },
+
+        "moon+kpfl": {
+            "static": {
+                "mu": 6,
+                "T": 1,
+                "inner_round_g": 8,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 6,
+                "kd_eta": 2,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 5,
+                "T": 1,
+                "inner_round_g": 4,
+                "inner_round_d": 3,
+                "kd_gamma": 6,
+                "kd_beta": 5,
+                "kd_eta": 10,
+                "con_T": 30,
+                "online_rate": -0.1,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 5,
+                "T": 40,
+                "inner_round_g": 4,
+                "inner_round_d": 4,
+                "kd_gamma": 8,
+                "kd_beta": 6,
+                "kd_eta": 8,
+                "con_T": 20,
+                "online_rate": 0.02,
+                "offline_rate": 0.18
+            },
+            "round-robin": {
+                "mu": 3,
+                "T": 50,
+                "inner_round_g": 7,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 10,
+                "kd_eta": 1,
+                "con_T": 30,
+                "online_rate": 0.2,
+                "offline_rate": -0.16
+            },
+            "random": {
+                "mu": 1,
+                "T": 20,
+                "inner_round_g": 9,
+                "inner_round_d": 4,
+                "kd_gamma": 2,
+                "kd_beta": 7,
+                "kd_eta": 9,
+                "con_T": 10,
+                "online_rate": 0.08,
+                "offline_rate": 0.16
+            },
+            "markov": {
+                "mu": 2,
+                "T": 25,
+                "inner_round_g": 2,
+                "inner_round_d": 5,
+                "kd_gamma": 7,
+                "kd_beta": 4,
+                "kd_eta": 3,
+                "con_T": 10,
+                "online_rate": -0.02,
+                "offline_rate": 0.06
+            }
+        },
+
+        "flwf+kpfl": {
+            "static": {
+                "alpha": 7,
+                "T": 16,
+                "inner_round_g": 6,
+                "inner_round_d": 4,
+                "kd_gamma": 10,
+                "kd_beta": 5,
+                "kd_eta": 2,
+                "con_T": 10,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "alpha": 15,
+                "T": 13,
+                "inner_round_g": 1,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 7,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": -0.2,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "alpha": 14,
+                "T": 11,
+                "inner_round_g": 4,
+                "inner_round_d": 4,
+                "kd_gamma": 4,
+                "kd_beta": 6,
+                "kd_eta": 10,
+                "con_T": 30,
+                "online_rate": -0.08,
+                "offline_rate": 0.06
+            },
+            "round-robin": {
+                "alpha": 7,
+                "T": 18,
+                "inner_round_g": 9,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 6,
+                "kd_eta": 8,
+                "con_T": 1,
+                "online_rate": 0.2,
+                "offline_rate": 0
+            },
+            "random": {
+                "alpha": 6,
+                "T": 10,
+                "inner_round_g": 7,
+                "inner_round_d": 4,
+                "kd_gamma": 1,
+                "kd_beta": 7,
+                "kd_eta": 7,
+                "con_T": 1,
+                "online_rate": -0.06,
+                "offline_rate": 0.04
+            },
+            "markov": {
+                "alpha": 18,
+                "T": 14,
+                "inner_round_g": 8,
+                "inner_round_d": 3,
+                "kd_gamma": 4,
+                "kd_beta": 2,
+                "kd_eta": 10,
+                "con_T": 20,
+                "online_rate": 0.18,
+                "offline_rate": 0.08
+            }
+        }
+    },
+
+    "digits": {
+        "fedavg": {},
+
+        "fedprox": {
+            "mu": 0.00325
+        },
+
+        "scaffold": {},
+
+        "fedmd": {
+            "finetine_epochs": 40,
+            "logit_matching_epochs": 5
+        },
+
+        "feddf": {
+            "ensemble_epoch": 50,
+            "sever_local_steps": 3,
+            "T": 5,
+            "d_batch_size": 64
+        },
+
+        "fedgen": {
+            "ensemble_epochs": 10,
+            "ensemble_alpha": 2,
+            "ensemble_eta": 1,
+            "generative_alpha": 14,
+            "gen_batch_size": 32
+        },
+
+        "moon": {
+            "mu": 6,
+            "T": 45
+        },
+
+        "fedproto": {
+            "ld": 0.0099
+        },
+
+        "fpl": {
+            "infoNCET": 3.4138
+        },
+
+        "flwf": {
+            "alpha": 2,
+            "T": 17
+        },
+
+        "cfed": {
+            "local_d_epochs": 10,
+            "server_d_epochs": 6,
+            "T": 5,
+            "alpha": 2.8412,
+            "d_batch_size": 256
+        },
+
+        "target": {
+            "alpha": 20,
+            "g_steps": 40,
+            "kd_steps": 20,
+            "warmup": 8,
+            "syn_round": 25,
+            "oh": 3,
+            "bn": 13,
+            "adv": 2,
+            "T": 7,
+            "gen_T": 15
+        },
+
+        "fccl": {
+            "public_batch_size": 256,
+            "off_diag_weight": 4.58
+        },
+
+        "fedcl": {
+            "proxy_ratio": 0.1,
+            "coe": 14
+        }
+    },
+
+    "office-caltech": {
+        "fedavg": {},
+
+        "fedprox": {
+            "mu": 0.22
+        },
+
+        "scaffold": {},
+
+        "fedmd": {
+            "finetine_epochs": 70,
+            "logit_matching_epochs": 2
+        },
+
+        "feddf": {
+            "ensemble_epoch": 30,
+            "sever_local_steps": 1,
+            "T": 30,
+            "d_batch_size": 64
+        },
+
+        "fedgen": {
+            "ensemble_epochs": 1,
+            "ensemble_alpha": 3,
+            "ensemble_eta": 1,
+            "generative_alpha": 14,
+            "gen_batch_size": 128
+        },
+
+        "moon": {
+            "mu": 4,
+            "T": 30
+        },
+
+        "fedproto": {
+            "ld": 18.5
+        },
+
+        "fedprotov2": {
+            "ld": 4.434193799972418,
+            "T": 25,
+            "warmup": 5
+        },
+
+        "fpl": {
+            "infoNCET": 3.76
+        },
+
+        "flwf": {
+            "alpha": 1,
+            "T": 13
+        },
+
+        "cfed": {
+            "local_d_epochs": 1,
+            "server_d_epochs": 1,
+            "T": 15,
+            "alpha": 2.47,
+            "d_batch_size": 256
+        },
+
+        "target": {
+            "alpha": 20,
+            "g_steps": 40,
+            "kd_steps": 20,
+            "warmup": 8,
+            "syn_round": 25,
+            "oh": 3,
+            "bn": 13,
+            "adv": 2,
+            "T": 7,
+            "gen_T": 15
+        },
+
+        "fccl": {
+            "public_batch_size": 256,
+            "off_diag_weight": 4.58
+        },
+
+        "fedcl": {
+            "proxy_ratio": 0.01,
+            "coe": 12.5
+        },
+
+        "fedavg+kpfl": {
+            "static":{
+                "inner_round_g": 8,
+                "inner_round_d": 5,
+                "kd_gamma": 6,
+                "kd_beta": 6,
+                "kd_eta": 3,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "random": {
+                "inner_round_g": 8,
+                "inner_round_d": 4,
+                "kd_gamma": 8,
+                "kd_beta": 5,
+                "kd_eta": 7,
+                "con_T": 10,
+                "online_rate": 0.02,
+                "offline_rate": -0.18
+            },
+            "markov": {
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 3,
+                "kd_beta": 5,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": 0.16,
+                "offline_rate": 0.2
+            }
+        },
+
+        "fedprox+kpfl": {
+            "static":{
+                "mu": 0.30000000000000004,
+                "inner_round_g": 8,
+                "inner_round_d": 4,
+                "kd_gamma": 8,
+                "kd_beta": 5,
+                "kd_eta": 7,
+                "con_T": 10,
+                "online_rate": 0.02,
+                "offline_rate": -0.18
+            },
+            "incremental-arrival": {
+                "mu": 0.5,
+                "inner_round_g": 5,
+                "inner_round_d": 2,
+                "kd_gamma": 6,
+                "kd_beta": 5,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": -0.08,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 0.1,
+                "inner_round_g": 9,
+                "inner_round_d": 4,
+                "kd_gamma": 7,
+                "kd_beta": 9,
+                "kd_eta": 8,
+                "con_T": 10,
+                "online_rate": 0.12,
+                "offline_rate": 0
+            },
+            "round-robin": {
+                "mu": 0.2,
+                "inner_round_g": 4,
+                "inner_round_d": 4,
+                "kd_gamma": 5,
+                "kd_beta": 6,
+                "kd_eta": 2,
+                "con_T": 50,
+                "online_rate": 0.06,
+                "offline_rate": -1.9
+            },
+            "random": {
+                "mu": 0.30000000000000004,
+                "inner_round_g": 8,
+                "inner_round_d": 4,
+                "kd_gamma": 8,
+                "kd_beta": 5,
+                "kd_eta": 7,
+                "con_T": 10,
+                "online_rate": 0.02,
+                "offline_rate": -0.18
+            },
+            "markov": {
+                "mu": 0.1,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 3,
+                "kd_beta": 5,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": 0.16,
+                "offline_rate": 0.2
+            }
+        },
+
+        "scaffold+kpfl": {
+            "static": {
+                "inner_round_g": 9,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 6,
+                "kd_eta": 1,
+                "con_T": 10,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "random": {
+                "inner_round_g": 10,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 6,
+                "kd_eta": 2,
+                "con_T": 40,
+                "online_rate": -0.14,
+                "offline_rate": -0.08
+            },
+            "markov": {
+                "inner_round_g": 9,
+                "inner_round_d": 3,
+                "kd_gamma": 1,
+                "kd_beta": 6,
+                "kd_eta": 7,
+                "con_T": 10,
+                "online_rate": 0.2,
+                "offline_rate": 0.16
+            }
+        },
+
+        "fedgen+kpfl": {
+            "static": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 4,
+                "ensemble_eta": 2,
+                "inner_round_g": 8,
+                "inner_round_d": 1,
+                "kd_gamma": 6,
+                "kd_beta": 4,
+                "kd_eta": 2,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 9,
+                "ensemble_eta": 4,
+                "inner_round_g": 4,
+                "inner_round_d": 2,
+                "kd_gamma": 4,
+                "kd_beta": 3,
+                "kd_eta": 1,
+                "con_T": 20,
+                "online_rate": 0.04,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 1,
+                "ensemble_eta": 3,
+                "inner_round_g": 7,
+                "inner_round_d": 5,
+                "kd_gamma": 9,
+                "kd_beta": 7,
+                "kd_eta": 10,
+                "con_T": 10,
+                "online_rate": -0.02,
+                "offline_rate": -0.1
+            },
+            "round-robin": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 7,
+                "ensemble_eta": 1,
+                "inner_round_g": 8,
+                "inner_round_d": 3,
+                "kd_gamma": 5,
+                "kd_beta": 2,
+                "kd_eta": 3,
+                "con_T": 1,
+                "online_rate": -0.08,
+                "offline_rate": -0.16
+            },
+            "random": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 5,
+                "ensemble_eta": 1,
+                "inner_round_g": 4,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 6,
+                "kd_eta": 6,
+                "con_T": 30,
+                "online_rate": -0.1,
+                "offline_rate": 0.12
+            },
+            "markov": {
+                "ensemble_epochs": 30,
+                "generative_alpha": 15,
+                "ensemble_alpha": 7,
+                "ensemble_eta": 2,
+                "inner_round_g": 9,
+                "inner_round_d": 4,
+                "kd_gamma": 7,
+                "kd_beta": 6,
+                "kd_eta": 4,
+                "con_T": 30,
+                "online_rate": 0.04,
+                "offline_rate": -0.16
+            }
+        },
+
+        "moon+kpfl": {
+            "static": {
+                "mu": 3,
+                "T": 10,
+                "inner_round_g": 3,
+                "inner_round_d": 3,
+                "kd_gamma": 9,
+                "kd_beta": 3,
+                "kd_eta": 2,
+                "con_T": 10,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "mu": 5,
+                "T": 25,
+                "inner_round_g": 1,
+                "inner_round_d": 5,
+                "kd_gamma": 3,
+                "kd_beta": 1,
+                "kd_eta": 7,
+                "con_T": 20,
+                "online_rate": 0.06,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "mu": 4,
+                "T": 10,
+                "inner_round_g": 8,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 8,
+                "kd_eta": 7,
+                "con_T": 50,
+                "online_rate": -0.02,
+                "offline_rate": 0.06
+            },
+            "round-robin": {
+                "mu": 1,
+                "T": 25,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 8,
+                "kd_beta": 6,
+                "kd_eta": 8,
+                "con_T": 1,
+                "online_rate": -0.04,
+                "offline_rate": -0.08
+            },
+            "random": {
+                "mu": 9,
+                "T": 40,
+                "inner_round_g": 6,
+                "inner_round_d": 1,
+                "kd_gamma": 7,
+                "kd_beta": 4,
+                "kd_eta": 6,
+                "con_T": 50,
+                "online_rate": -0.2,
+                "offline_rate": -0.14
+            },
+            "markov": {
+                "mu": 7,
+                "T": 35,
+                "inner_round_g": 3,
+                "inner_round_d": 1,
+                "kd_gamma": 9,
+                "kd_beta": 3,
+                "kd_eta": 4,
+                "con_T": 40,
+                "online_rate": 0.16,
+                "offline_rate": 0.06
+            }
+        },
+
+        "flwf+kpfl": {
+            "static": {
+                "alpha": 2,
+                "T": 10,
+                "inner_round_g": 3,
+                "inner_round_d": 3,
+                "kd_gamma": 8,
+                "kd_beta": 5,
+                "kd_eta": 9,
+                "con_T": 20,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "alpha": 8,
+                "T": 18,
+                "inner_round_g": 5,
+                "inner_round_d": 3,
+                "kd_gamma": 7,
+                "kd_beta": 7,
+                "kd_eta": 10,
+                "con_T": 40,
+                "online_rate": -0.1,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "alpha": 24,
+                "T": 14,
+                "inner_round_g": 6,
+                "inner_round_d": 4,
+                "kd_gamma": 6,
+                "kd_beta": 9,
+                "kd_eta": 7,
+                "con_T": 40,
+                "online_rate": 0.12,
+                "offline_rate": 0.1
+            },
+            "round-robin": {
+                "alpha": 4,
+                "T": 10,
+                "inner_round_g": 6,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 10,
+                "kd_eta": 8,
+                "con_T": 20,
+                "online_rate": 0.18,
+                "offline_rate": 0.12
+            },
+            "random": {
+                "alpha": 8,
+                "T": 13,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0.1
+            },
+            "markov": {
+                "alpha": 18,
+                "T": 19,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 8,
+                "con_T": 20,
+                "online_rate": 0.16,
+                "offline_rate": -0.12
+            }
+        },
+
+        "cfed+kpfl": {
+            "static": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 2,
+                "kd_gamma": 3,
+                "kd_beta": 5,
+                "kd_eta": 4,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0.1
+            },
+            "round-robin": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0.1
+            },
+            "random": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0.1
+            },
+            "markov": {
+                "local_d_epochs": 1,
+                "server_d_epochs": 1,
+                "T": 15,
+                "alpha": 2.47,
+                "d_batch_size": 256,
+                "inner_round_g": 7,
+                "inner_round_d": 1,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 6,
+                "con_T": 20,
+                "online_rate": -0.04,
+                "offline_rate": 0.1
+            }
+        },
+
+        "fedmd+kpfl": {
+            "static": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 2,
+                "inner_round_g": 2,
+                "inner_round_d": 4,
+                "kd_gamma": 3,
+                "kd_beta": 3,
+                "kd_eta": 3,
+                "con_T": 40,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 2,
+                "inner_round_g": 7,
+                "inner_round_d": 3,
+                "kd_gamma": 9,
+                "kd_beta": 1,
+                "kd_eta": 5,
+                "con_T": 40,
+                "online_rate": 0.02,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 1,
+                "inner_round_g": 6,
+                "inner_round_d": 5,
+                "kd_gamma": 8,
+                "kd_beta": 4,
+                "kd_eta": 9,
+                "con_T": 40,
+                "online_rate": -0.04,
+                "offline_rate": -0.06
+            },
+            "round-robin": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 1,
+                "inner_round_g": 1,
+                "inner_round_d": 3,
+                "kd_gamma": 7,
+                "kd_beta": 7,
+                "kd_eta": 7,
+                "con_T": 40,
+                "online_rate": 0.18,
+                "offline_rate": -0.16
+            },
+            "random": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 1,
+                "inner_round_g": 5,
+                "inner_round_d": 1,
+                "kd_gamma": 2,
+                "kd_beta": 9,
+                "kd_eta": 6,
+                "con_T": 40,
+                "online_rate": -0.04,
+                "offline_rate": -0.16
+            },
+            "markov": {
+                "finetine_epochs": 70,
+                "logit_matching_epochs": 1,
+                "inner_round_g": 5,
+                "inner_round_d": 4,
+                "kd_gamma": 5,
+                "kd_beta": 3,
+                "kd_eta": 8,
+                "con_T": 50,
+                "online_rate": -0.06,
+                "offline_rate": 0.12
+            }
+        },
+
+        "fpl+kpfl": {
+            "static": {
+                "infoNCET": 2.841849360828718,
+                "inner_round_g": 7,
+                "inner_round_d": 4,
+                "kd_gamma": 4,
+                "kd_beta": 6,
+                "kd_eta": 10,
+                "con_T": 30,
+                "online_rate": 0,
+                "offline_rate": 0
+            },
+            "incremental-arrival": {
+                "infoNCET": 4.9290812639409065,
+                "inner_round_g": 5,
+                "inner_round_d": 4,
+                "kd_gamma": 1,
+                "kd_beta": 3,
+                "kd_eta": 1,
+                "con_T": 10,
+                "online_rate": -0.16,
+                "offline_rate": 0
+            },
+            "incremental-departure": {
+                "infoNCET": 4.943572575177046,
+                "inner_round_g": 10,
+                "inner_round_d": 5,
+                "kd_gamma": 8,
+                "kd_beta": 2,
+                "kd_eta": 10,
+                "con_T": 10,
+                "online_rate": -0.02,
+                "offline_rate": -0.16
+            },
+            "round-robin": {
+                "infoNCET": 2.9439401257424334,
+                "inner_round_g": 2,
+                "inner_round_d": 5,
+                "kd_gamma": 10,
+                "kd_beta": 6,
+                "kd_eta": 7,
+                "con_T": 10,
+                "online_rate": -0.12,
+                "offline_rate": 0.14
+            },
+            "random": {
+                "infoNCET": 4.002816623767079,
+                "inner_round_g": 1,
+                "inner_round_d": 2,
+                "kd_gamma": 7,
+                "kd_beta": 1,
+                "kd_eta": 4,
+                "con_T": 1,
+                "online_rate": 0.04,
+                "offline_rate": -0.06
+            },
+            "markov": {
+                "infoNCET": 4.989968747205056,
+                "inner_round_g": 9,
+                "inner_round_d": 2,
+                "kd_gamma": 10,
+                "kd_beta": 4,
+                "kd_eta": 10,
+                "con_T": 50,
+                "online_rate": -0.08,
+                "offline_rate": -0.14
+            }
+        }
+    }
+}

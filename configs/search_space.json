@@ -1,0 +1,98 @@
+{
+    "fedavg": {
+
+    },
+
+    "fedprox": {
+        "mu": {"_type": "quniform", "_value": [0, 1, 0.01]}
+    },
+
+    "scaffold": {
+
+    },
+
+    "fedmd": {
+        "logit_matching_epochs": {"_type": "quniform", "_value": [1, 20, 1]}
+    },
+
+    "feddf": {
+        "ensemble_epoch": {"_type": "quniform", "_value": [1, 50, 10]},
+        "sever_local_steps": {"_type": "quniform", "_value": [1, 10, 1]},
+        "T": {"_type": "quniform", "_value": [1, 50, 5]},
+        "d_batch_size": {"_type": "choice", "_value": [32, 64, 128, 256]}
+    },
+
+    "fedgen": {
+        "ensemble_epochs": {"_type": "quniform", "_value": [1, 100, 10]},
+        "ensemble_alpha": {"_type": "quniform", "_value": [1, 10, 1]},
+        "ensemble_eta": {"_type": "quniform", "_value": [1, 10, 1]},
+        "generative_alpha": {"_type": "quniform", "_value": [1, 20, 1]},
+        "gen_batch_size": {"_type": "choice", "_value": [32, 64, 128, 256]}
+    },
+
+    "moon": {
+        "mu": {"_type": "quniform", "_value": [1, 10, 1]},
+        "T":  {"_type": "quniform", "_value": [1, 50, 5]}
+    },
+
+    "fedproto": {
+        "ld": {"_type": "uniform", "_value": [0, 20]}
+    },
+
+    "fedprotov2": {
+        "ld": {"_type": "uniform", "_value": [0, 30]},
+        "T":  {"_type": "quniform", "_value": [1, 50, 5]},
+        "warmup": {"_type": "quniform", "_value": [1, 10, 1]}
+    },
+
+    "fpl": {
+        "infoNCET": {"_type": "uniform", "_value": [0, 5]}
+    },
+
+    "flwf": {
+        "alpha": {"_type": "quniform", "_value": [1, 30, 1]},
+        "T": {"_type": "quniform", "_value": [1, 20, 1]}
+    },
+
+    "cfed": {
+        "local_d_epochs": {"_type": "quniform", "_value": [1, 10, 1]},
+        "server_d_epochs": {"_type": "quniform", "_value": [1, 10, 1]},
+        "T": {"_type": "quniform", "_value": [1, 50, 5]},
+        "alpha": {"_type": "uniform", "_value": [0, 5]},
+        "d_batch_size": {"_type": "choice", "_value": [32, 64, 128, 256]}
+    },
+
+    "target": {
+        "alpha": {"_type": "quniform", "_value": [15, 25, 1]},
+        "g_steps": {"_type": "quniform", "_value": [20, 50, 10]},
+        "kd_steps": {"_type": "quniform", "_value": [20, 50, 10]},
+        "warmup": {"_type": "quniform", "_value": [1, 10, 1]},
+        "syn_round": {"_type": "choice", "_value": [10, 15, 20, 25, 30]},
+        "oh": {"_type": "quniform", "_value": [1, 5, 1]},
+        "bn": {"_type": "quniform", "_value": [10, 20, 1]},
+        "adv": {"_type": "quniform", "_value": [1, 5, 1]},
+        "T": {"_type": "quniform", "_value": [1, 10, 1]},
+        "gen_T": {"_type": "quniform", "_value": [1, 50, 5]}
+    },
+
+    "fccl": {
+        "public_batch_size": {"_type": "choice", "_value": [64, 128, 256]},
+        "off_diag_weight": {"_type": "uniform", "_value": [0, 5]}
+    },
+
+    "fedcl": {
+        "proxy_ratio": {"_type": "choice", "_value": [0.01, 0.05, 0.1]},
+        "coe": {"_type": "quniform", "_value": [0, 20, 0.5]}
+    },
+
+    "fedkpfl": {
+        "inner_round_g": {"_type": "quniform", "_value": [1, 10, 1]},
+        "inner_round_d": {"_type": "quniform", "_value": [1, 5, 1]},
+        "kd_gamma": {"_type": "quniform", "_value": [1, 10, 1]},
+        "kd_beta": {"_type": "quniform", "_value": [1, 10, 1]},
+        "kd_eta": {"_type": "quniform", "_value": [1, 10, 1]},
+        "con_T": {"_type": "quniform", "_value": [1, 50, 10]},
+        "online_rate": {"_type": "quniform", "_value": [-0.2, 0.2, 0.02]},
+        "offline_rate": {"_type": "quniform", "_value": [-0.2, 0.2, 0.02]}
+    }
+}
