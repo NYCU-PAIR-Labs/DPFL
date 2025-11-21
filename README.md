@@ -192,8 +192,9 @@ If you use this code for your research, please cite the following paper:
   title={Dynamic Client Participation in Federated Learning: Benchmarks and a Knowledge Pool Plugin},
   author={Ming-Lun Lee, Fu-Shiang Yang, Cheng-Kuan Lin, Yan-Ann Chen, Chih-Yu Lin, Yu-Chee Tseng},
   year={2025},
-  eprint={2511.xxxxx},
+  eprint={2511.16523},
   archivePrefix={arXiv},
-  primaryClass={cs.CV}
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2511.16523},
 }
 ```
